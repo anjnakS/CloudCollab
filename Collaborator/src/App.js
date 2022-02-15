@@ -4,10 +4,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Dashboard from './Components/Dashboard';
 import Treeview from './Components/Treeview';
 import Login from './Components/Login';
-
+import useToken from './useToken';
 
 function App() {
-  const [token, setToken] = useState();
+
+  const { token, setToken } = useToken();
+
+
 
   if(!token) {
     return <Login setToken={setToken} />

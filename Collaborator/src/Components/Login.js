@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './Login.css';
 
-export default function Login() {
+export default function Login({ setToken }) {
+    
+    const [username, setUserName] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    
+
   return(
     <div className="login-wrapper">
       <h1>Please Log In</h1>
 
     <form>
+    <label>
+        <p>Name</p>
+        <input type="text" onChange={e => setUserName(e.target.value)}/>
+      </label>
       <label>
-        <p>Username</p>
-        <input type="text" />
+        <p>Shareworks email address</p>
+        <input type="email" onChange={e => setEmail(e.target.value)}/>
       </label>
       <label>
         <p>Password</p>
-        <input type="password" />
+        <input type="password" onChange={e => setPassword(e.target.value)}/>
       </label>
       <div>
         <button type="submit">Submit</button>
@@ -22,3 +33,6 @@ export default function Login() {
     </div>
   )
 }
+Login.propTypes = {
+    setToken: PropTypes.func.isRequired
+  }
