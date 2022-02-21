@@ -56,8 +56,12 @@ export default function TeamGBC() {
     <Text style={styles.headerText}> Gainz Bond Crew </Text>
     <View style={styles.TeamNameShape} />
 
+    <View style={styles.containerTeam}>
     <Text style={styles.headerText}> Current Work </Text>
     <View style={styles.WorkShape} />
+    <Text style={styles.headerText}> Epic: MS-3035 Release version: 2022.03 Rag Status : Amber </Text>
+    
+    </View>
   
     </View>
     <View style={styles.containerTeam}>

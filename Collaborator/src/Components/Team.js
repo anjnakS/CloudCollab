@@ -53,12 +53,14 @@ export default function Team() {
   return(
     <div>
     <View style={styles.container}>
-    <Text style={styles.headerText}> Lets Get Fiscal </Text>
+    <Text style={styles.headerText}> A-Team </Text>
     <View style={styles.TeamNameShape} />
-
+    </View>
+    <View style={styles.containerTeam}>
     <Text style={styles.headerText}> Current Work </Text>
     <View style={styles.WorkShape} />
-  
+    <Text style={styles.headerText}> Epic: MS-3032 Release version: 2022.02 Rag Status : Green </Text>
+    
     </View>
     <View style={styles.containerTeam}>
     <Text style={styles.headerText}> Team </Text>
