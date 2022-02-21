@@ -1,0 +1,38 @@
+.square {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+  
+  .circle {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 50%;
+  }
+  
+  .text {
+    margin: auto;
+  }
+  .maindiv {
+    float: right;
+    clear: none;
+}
+.maindiv1 {
+    float: left;
+    clear: none;
+}
+.row {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .block {
+    width: 100px;
+    float: right;
+  }
+  .blockleft {
+    width: 100px;
+    float: left;
+  }

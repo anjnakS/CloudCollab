@@ -3,6 +3,9 @@ import TreeView from '@mui/lab/TreeView';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TreeItem from '@mui/lab/TreeItem';
+import Team from './Team';
+import TeamGBC from './TeamGBC';
+import Games from './Games';
 export default function Treeview() {
   const data= {
     id: "company",
@@ -138,7 +141,19 @@ const renderTree = (nodes) => (
    {renderTree(data)}
 
    </TreeView>
-   <div style={{ margin: 50 }}></div>
+   <div  style={{ display: 'flex' }}>
+  <div  style={{
+      
+       width: window.innerWidth * 0.25,
+     }}> <Team/><br/><TeamGBC/></div>
+      <div  style={{
+      
+      width: window.innerWidth * 0.5,
+     
+     }} > </div>
+  <div > <Games/> </div>
+  
+</div>
   
  </div>
  );

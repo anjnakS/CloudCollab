@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { StyleSheet, Text, View } from 'react-native';
 import './Login.css';
 
 export default function Login({ setToken }) {
@@ -33,6 +33,3 @@ export default function Login({ setToken }) {
     </div>
   )
 }
-Login.propTypes = {
-    setToken: PropTypes.func.isRequired
-  }
