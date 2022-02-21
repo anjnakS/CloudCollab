@@ -6,6 +6,7 @@ import TreeItem from '@mui/lab/TreeItem';
 import Team from './Team';
 import TeamGBC from './TeamGBC';
 import Games from './Games';
+
 export default function Treeview() {
   const data= {
     id: "company",
@@ -126,6 +127,7 @@ const renderTree = (nodes) => (
   return(
   
     <div style={{ display: 'flex', padding: 30 }}>
+      
     <TreeView
      style={{
        backgroundColor: '#e5e5e5',
@@ -141,6 +143,11 @@ const renderTree = (nodes) => (
    {renderTree(data)}
 
    </TreeView>
+   <div  style={{
+      
+      width: window.innerWidth * 0.005,
+     
+     }} > </div>
    <div  style={{ display: 'flex' }}>
   <div  style={{
       
