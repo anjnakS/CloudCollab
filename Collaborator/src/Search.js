@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+
 import './Search.css';
 const SearchBar = () => (
-    <form action="/" method="get">
-        <label htmlFor="header-search">
+    <div>
             <span className="visually-hidden">Search Jira(S) with keywords</span>
-        </label>
+        
         <input
             type="text"
             id="header-search"
@@ -16,7 +16,7 @@ const SearchBar = () => (
               }}
         />
         <button type="submit">Search</button>
-    </form>
+    </div>
 );
 
 export default SearchBar;
