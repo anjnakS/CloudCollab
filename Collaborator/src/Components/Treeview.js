@@ -151,11 +151,11 @@ const renderTree = (nodes) => (
    <div  style={{ display: 'flex' }}>
   <div  style={{
       
-       width: window.innerWidth * 0.25,
+       width: window.innerWidth * 0.35,
      }}> <Team/><br/><TeamGBC/></div>
       <div  style={{
       
-      width: window.innerWidth * 0.5,
+      width: window.innerWidth * 0.35,
      
      }} > </div>
   <div > <Games/> </div>

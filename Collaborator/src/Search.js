@@ -8,7 +8,7 @@ const SearchBar = () => (
         <input
             type="text"
             id="header-search"
-            placeholder="Serach Jira(s) with keywords"
+            placeholder="Serach Jira(s) with Jira:Keyword and employees with employee:name"
             name="s" 
             style={{
       

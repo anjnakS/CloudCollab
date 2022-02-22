@@ -70,11 +70,13 @@ export default function TeamGBC() {
   
     <Text style={styles.headerText}> Owiny</Text>
     <View style={styles.TeamMemberShape} />  
-    <Text style={styles.headerText}> Twinkle Patel </Text>
+    <Text style={styles.headerText}> Twinkle Patel (QA)</Text>
     <View style={styles.TeamMemberShape} />  
     <Text style={styles.headerText}> Roop </Text>
     <View style={styles.TeamMemberShape} />  
     <Text style={styles.headerText}> Jason </Text>
+    <View style={styles.TeamMemberShape} /> 
+    <Text style={styles.headerText}> Anjna Khanna (Manager) </Text>
     <View style={styles.TeamMemberShape} />  
     </View>
   

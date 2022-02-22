@@ -72,7 +72,9 @@ export default function Team() {
     <View style={styles.TeamMemberShape} />  
     <Text style={styles.headerText}> Qun Zhao </Text>
     <View style={styles.TeamMemberShape} />  
-    <Text style={styles.headerText}> Prasad </Text>
+    <Text style={styles.headerText}> Prasad (QA) </Text>
+    <View style={styles.TeamMemberShape} />  
+    <Text style={styles.headerText}> Anjna Khanna (Manager) </Text>
     <View style={styles.TeamMemberShape} />  
     </View>
   

@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="wrapper">
       <h1>Cloud Collaborators</h1>
-      <SearchBar />
+     
     
       <BrowserRouter>
         <Switch>
@@ -20,9 +20,11 @@ function App() {
             <Login />
           </Route>
           <Route path="/results">
+          <SearchBar />
             <JiraResults />
           </Route>
           <Route path="/">
+          <SearchBar />
             <Treeview />
           </Route>
         </Switch>
