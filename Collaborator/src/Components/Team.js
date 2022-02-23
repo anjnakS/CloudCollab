@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from 'react-native';
 import './Circle.css';
 import { Female } from '@mui/icons-material';
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
       textAlign: "center",
       margin: 10,
       fontWeight: "bold"
+
     }, 
     TeamNameShape: {
       width: 150,
@@ -48,10 +49,44 @@ const styles = StyleSheet.create({
         borderRadius: 30 / 2,
         backgroundColor: '#00a800',
       },
+      TeamMemberShapeSelected: {
+        width: 30,
+        height: 30,
+        borderRadius: 30 / 2,
+        backgroundColor: 'blue',
+      },
   });
+   
 export default function Team() {
 
-    
+    const [style1, setStyle1] = useState(styles.TeamMemberShape);
+    const [style2, setStyle2] = useState(styles.TeamMemberShape);
+    const [style3, setStyle3] = useState(styles.TeamMemberShape);
+    const [style4, setStyle4] = useState(styles.TeamMemberShape);
+    const [style5, setStyle5] = useState(styles.TeamMemberShape);
+  const changeStyle = (style) => {
+    if(style === style1)
+        style === styles.TeamMemberShape? setStyle1(styles.TeamMemberShapeSelected): setStyle1(styles.TeamMemberShape); 
+    else if(style === style2)
+        style === styles.TeamMemberShape? setStyle2(styles.TeamMemberShapeSelected): setStyle2(styles.TeamMemberShape); 
+
+        else if(style === style3)
+        style === styles.TeamMemberShape? setStyle3(styles.TeamMemberShapeSelected): setStyle3(styles.TeamMemberShape); 
+
+        else if(style === style4)
+        style === styles.TeamMemberShape? setStyle4(styles.TeamMemberShapeSelected): setStyle4(styles.TeamMemberShape); 
+
+        else if(style === style5)
+        style === styles.TeamMemberShape? setStyle5(styles.TeamMemberShapeSelected): setStyle5(styles.TeamMemberShape); 
+
+
+  };
+  const handleClick = (style) => {
+  
+     
+      changeStyle(style);
+
+}   
 
   return(
     <div >
@@ -69,16 +104,16 @@ export default function Team() {
     <Text style={styles.headerText}> Team </Text>
     <View style={styles.TeamShape} />  
   
-    <Text style={styles.headerText}> Adam Clark </Text>
-    <View style={styles.TeamMemberShape} />  
-    <Text style={styles.headerText}> Cate Ryan </Text>
-    <View style={styles.TeamMemberShape} />  
-    <Text style={styles.headerText}> Qun Zhao </Text>
-    <View style={styles.TeamMemberShape} />  
-    <Text style={styles.headerText}> Prasad (QA) </Text>
-    <View style={styles.TeamMemberShape} />  
-    <Text style={styles.headerText}> Anjna Khanna (Manager) </Text>
-    <View style={styles.TeamMemberShape} />  
+    <Text onClick={() => handleClick(style1)}  style={styles.headerText}> Adam Clark </Text>
+    <View  onClick={() => handleClick(style1)} style={style1} />  
+    <Text onClick={() => handleClick(style2)} style={styles.headerText}> Cate Ryan </Text>
+    <View  onClick={() => handleClick(style2)} style={style2} />   
+    <Text onClick={() => handleClick(style3)} style={styles.headerText}> Qun Zhao </Text>
+    <View  onClick={() => handleClick(style3)} style={style3} />    
+    <Text onClick={() => handleClick(style4)} style={styles.headerText}> Prasad (QA) </Text>
+    <View  onClick={() => handleClick(style4)} style={style4} />   
+    <Text onClick={() => handleClick(style5)} style={styles.headerText}> Anjna Khanna (Manager) </Text>
+    <View  onClick={() => handleClick(style5)} style={style5} />   
     </View>
   
     </div>

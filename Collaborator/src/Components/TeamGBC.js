@@ -48,7 +48,34 @@ const styles = StyleSheet.create({
   });
 export default function TeamGBC() {
 
-    
+  const [style1, setStyle1] = useState(styles.TeamMemberShape);
+  const [style2, setStyle2] = useState(styles.TeamMemberShape);
+  const [style3, setStyle3] = useState(styles.TeamMemberShape);
+  const [style4, setStyle4] = useState(styles.TeamMemberShape);
+  const [style5, setStyle5] = useState(styles.TeamMemberShape);
+const changeStyle = (style) => {
+  if(style === style1)
+      style === styles.TeamMemberShape? setStyle1(styles.TeamMemberShapeSelected): setStyle1(styles.TeamMemberShape); 
+  else if(style === style2)
+      style === styles.TeamMemberShape? setStyle2(styles.TeamMemberShapeSelected): setStyle2(styles.TeamMemberShape); 
+
+      else if(style === style3)
+      style === styles.TeamMemberShape? setStyle3(styles.TeamMemberShapeSelected): setStyle3(styles.TeamMemberShape); 
+
+      else if(style === style4)
+      style === styles.TeamMemberShape? setStyle4(styles.TeamMemberShapeSelected): setStyle4(styles.TeamMemberShape); 
+
+      else if(style === style5)
+      style === styles.TeamMemberShape? setStyle5(styles.TeamMemberShapeSelected): setStyle5(styles.TeamMemberShape); 
+
+
+};
+const handleClick = (style) => {
+
+   
+    changeStyle(style);
+
+}   
 
   return(
     <div>
@@ -68,16 +95,16 @@ export default function TeamGBC() {
     <Text style={styles.headerText}> Team </Text>
     <View style={styles.TeamShape} />  
   
-    <Text style={styles.headerText}> Owiny</Text>
-    <View style={styles.TeamMemberShape} />  
-    <Text style={styles.headerText}> Twinkle Patel (QA)</Text>
-    <View style={styles.TeamMemberShape} />  
-    <Text style={styles.headerText}> Roop </Text>
-    <View style={styles.TeamMemberShape} />  
-    <Text style={styles.headerText}> Jason </Text>
-    <View style={styles.TeamMemberShape} /> 
-    <Text style={styles.headerText}> Anjna Khanna (Manager) </Text>
-    <View style={styles.TeamMemberShape} />  
+    <Text onClick={() => handleClick(style1)}  style={styles.headerText}> Owiny</Text>
+    <View onClick={() => handleClick(style1)}  style={style1} />  
+    <Text onClick={() => handleClick(style1)} style={styles.headerText}> Twinkle Patel (QA)</Text>
+    <View onClick={() => handleClick(style1)} style={style2} />  
+    <Text onClick={() => handleClick(style1)} style={styles.headerText}> Roop </Text>
+    <View onClick={() => handleClick(style1)} style={style3} />  
+    <Text onClick={() => handleClick(style1)} style={styles.headerText}> Jason </Text>
+    <View onClick={() => handleClick(style1)} style={styles4} /> 
+    <Text onClick={() => handleClick(style1)} style={styles.headerText}> Anjna Khanna (Manager) </Text>
+    <View onClick={() => handleClick(style1)}  style={styles5} />  
     </View>
   
     </div>
