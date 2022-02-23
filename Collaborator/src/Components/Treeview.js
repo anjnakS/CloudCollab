@@ -6,7 +6,7 @@ import TreeItem from '@mui/lab/TreeItem';
 import Team from './Team';
 import TeamGBC from './TeamGBC';
 import Games from './Games';
-
+import Trainings from './Trainings';
 export default function Treeview() {
   const data= {
     id: "company",
@@ -22,7 +22,7 @@ export default function Treeview() {
             children: [
               {
                 id: "team1_1",
-                name: "A-Team",
+                name: "Lets Get Fiscal",
                 children: []
               },
               {
@@ -157,9 +157,11 @@ const renderTree = (nodes) => (
       
       width: window.innerWidth * 0.35,
      
+     
      }} > </div>
+     <div > <Trainings/> </div>
+     <br/><br/>
   <div > <Games/> </div>
-  
 </div>
   
  </div>

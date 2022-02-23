@@ -1,12 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import './Circle.css';
+import { Female } from '@mui/icons-material';
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "#C0C0C0",
+      
  
     },
     containerTeam: {
@@ -51,9 +54,9 @@ export default function Team() {
     
 
   return(
-    <div>
+    <div >
     <View style={styles.container}>
-    <Text style={styles.headerText}> A-Team </Text>
+    <Text style={styles.headerText}> Lets Get Fiscal </Text>
     <View style={styles.TeamNameShape} />
     </View>
     <View style={styles.containerTeam}>
