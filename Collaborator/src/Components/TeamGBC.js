@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from 'react-native';
 import './Circle.css';
 const styles = StyleSheet.create({
@@ -44,6 +44,11 @@ const styles = StyleSheet.create({
         height: 30,
         borderRadius: 30 / 2,
         backgroundColor: '#00a800',
+      },  TeamMemberShapeSelected: {
+        width: 30,
+        height: 30,
+        borderRadius: 30 / 2,
+        backgroundColor: 'blue',
       },
   });
 export default function TeamGBC() {
@@ -97,14 +102,14 @@ const handleClick = (style) => {
   
     <Text onClick={() => handleClick(style1)}  style={styles.headerText}> Owiny</Text>
     <View onClick={() => handleClick(style1)}  style={style1} />  
-    <Text onClick={() => handleClick(style1)} style={styles.headerText}> Twinkle Patel (QA)</Text>
-    <View onClick={() => handleClick(style1)} style={style2} />  
-    <Text onClick={() => handleClick(style1)} style={styles.headerText}> Roop </Text>
-    <View onClick={() => handleClick(style1)} style={style3} />  
-    <Text onClick={() => handleClick(style1)} style={styles.headerText}> Jason </Text>
-    <View onClick={() => handleClick(style1)} style={styles4} /> 
-    <Text onClick={() => handleClick(style1)} style={styles.headerText}> Anjna Khanna (Manager) </Text>
-    <View onClick={() => handleClick(style1)}  style={styles5} />  
+    <Text onClick={() => handleClick(style2)} style={styles.headerText}> Twinkle Patel (QA)</Text>
+    <View onClick={() => handleClick(style2)} style={style2} />  
+    <Text onClick={() => handleClick(style3)} style={styles.headerText}> Roop </Text>
+    <View onClick={() => handleClick(style3)} style={style3} />  
+    <Text onClick={() => handleClick(style4)} style={styles.headerText}> Jason </Text>
+    <View onClick={() => handleClick(style4)} style={style4} /> 
+    <Text onClick={() => handleClick(style5)} style={styles.headerText}> Anjna Khanna (Manager) </Text>
+    <View onClick={() => handleClick(style5)}  style={style5} />  
     </View>
   
     </div>
