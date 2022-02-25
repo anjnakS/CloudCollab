@@ -121,3 +121,15 @@ echo -e "azure.keyvault.client-key="$SP_PASSWORD
 echo -e "azure.keyvault.tenant-id="$SP_TENANT_ID
 echo -e "azure.keyvault.uri=https://"$KEYVAULTNAME".vault.azure.net/"
 echo -e "spring.jms.servicebus.connection-string="$SBCONNSTRING
+echo "########################## "
+echo -e  " Create docker images and push them to ACR "
+echo "c######################## "
+sudo docker-compose up --no-start
+sudo docker tag anjnadockerid1/stocksserverfrontend:v3 $ACR_REG_NEW_NAME.azurecr.io/stocksserverfrontend:v3
+sudo docker tag anjnadockerid1/stocksserverbackend:v3 $ACR_REG_NEW_NAME.azurecr.io/stocksserverbackend:v3
+sudo docker tag anjnadockerid1/stocksserverworker:v3 $ACR_REG_NEW_NAME.azurecr.io/stocksserverworker:v3
+sudo az acr login --name $ACR_REG_NAME
+sudo docker push $ACR_REG_NAME.azurecr.io/stocksserverfrontend:v3
+sudo docker push $ACR_REG_NAME.azurecr.io/stocksserverbackend:v3
+sudo docker push $ACR_REG_NAME.azurecr.io/stocksserverworker:v3
+sudo az acr repository list --name  $ACR_REG_NEW_NAME --output table
