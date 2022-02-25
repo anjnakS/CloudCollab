@@ -80,11 +80,7 @@ echo "########################## "
 echo -e  " Create docker images and push them to ACR "
 echo "c######################## "
 sudo docker-compose up --no-start
-sudo docker tag anjnadockerid1/stocksserverfrontend:v3 $ACR_REG_NEW_NAME.azurecr.io/stocksserverfrontend:v3
-sudo docker tag anjnadockerid1/stocksserverbackend:v3 $ACR_REG_NEW_NAME.azurecr.io/stocksserverbackend:v3
-sudo docker tag anjnadockerid1/stocksserverworker:v3 $ACR_REG_NEW_NAME.azurecr.io/stocksserverworker:v3
+sudo docker tag anjnadockerid1/cloudcollabfrontend:v3 $ACR_REG_NAME.azurecr.io/cloudcollabfrontend:v3
 sudo az acr login --name $ACR_REG_NAME
 sudo docker push $ACR_REG_NAME.azurecr.io/stocksserverfrontend:v3
-sudo docker push $ACR_REG_NAME.azurecr.io/stocksserverbackend:v3
-sudo docker push $ACR_REG_NAME.azurecr.io/stocksserverworker:v3
-sudo az acr repository list --name  $ACR_REG_NEW_NAME --output table
+sudo az acr repository list --name  $ACR_REG_NAME --output table
