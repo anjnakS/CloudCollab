@@ -2,20 +2,18 @@ echo "########################## "
 echo -e  " Set Shell variables"
 echo "######################### "
 VERSION=2
-SUBSCRIPTION="e247041b-0729-4095-9488-564fbc84a3b7"
-RESOURCE_GROUP="default"
-ACR_REG_NAME="anjnaacr"$VERSION
-POSTGRES_USER_NAME="anjna"$VERSION
-POSTGRES_DB=anjnapostgres$VERSION
+SUBSCRIPTION="0464d07f-ff01-42ff-9d99-92cd02ad7e83"
+RESOURCE_GROUP="CloudCollabRG"
+ACR_REG_NAME="anjnaacr"
+POSTGRES_USER_NAME="anjna"
+POSTGRES_DB=anjnapostgres
 LOCATION="eastus"
 SKU="Basic"
-KEYVAULTNAME="newsafevault"$VERSION
-POSTGRES_PASSWD="Postgres"$VERSION
-SERVICE_PRINCIPAL="anjnasp"$VERSION
+KEYVAULTNAME="cloudcollabkeyvault"
+POSTGRES_PASSWD="Postgres1"
+SERVICE_PRINCIPAL="anjnaspcc"$
 SP_TENANT_ID="8d09f28d-2b54-4761-98f1-de38762cd939"
- POSTGRES_ORIG_DB="anjnapostgres"
- POSTGRES_ORIG_USER="workeruser"
- POSTGRES_ORIG_PASSWD="Postgres1"
+
  echo "########################## "
 echo -e  " Create Container Registry "
 echo "######################### "
@@ -80,11 +78,7 @@ echo "########################## "
 echo -e  " Create docker images and push them to ACR "
 echo "c######################## "
 sudo docker-compose up --no-start
-sudo docker tag anjnadockerid1/stocksserverfrontend:v3 $ACR_REG_NEW_NAME.azurecr.io/stocksserverfrontend:v3
-sudo docker tag anjnadockerid1/stocksserverbackend:v3 $ACR_REG_NEW_NAME.azurecr.io/stocksserverbackend:v3
-sudo docker tag anjnadockerid1/stocksserverworker:v3 $ACR_REG_NEW_NAME.azurecr.io/stocksserverworker:v3
+sudo docker tag anjnadockerid1/cloudcollabfrontend:v3 $ACR_REG_NAME.azurecr.io/cloudcollabfrontend:v3
 sudo az acr login --name $ACR_REG_NAME
 sudo docker push $ACR_REG_NAME.azurecr.io/stocksserverfrontend:v3
-sudo docker push $ACR_REG_NAME.azurecr.io/stocksserverbackend:v3
-sudo docker push $ACR_REG_NAME.azurecr.io/stocksserverworker:v3
-sudo az acr repository list --name  $ACR_REG_NEW_NAME --output table
+sudo az acr repository list --name  $ACR_REG_NAME --output table
