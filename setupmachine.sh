@@ -48,7 +48,7 @@ sudo dnf install -y azure-cli
 echo "########################## "
 echo -e  " Build demo project"
 echo "######################### "
-git clone https://github.com/anjnakS/CloudCollab.git
+
 cd CloudCollab
 npm install
 echo "############################"
