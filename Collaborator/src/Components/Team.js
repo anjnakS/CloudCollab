@@ -97,7 +97,7 @@ export default function Team() {
     <View style={styles.containerTeam}>
     <Text style={styles.headerText}> Current Work </Text>
     <View style={styles.WorkShape} />
-    <Text style={styles.headerText}> Epic: MS-3032 Release version: 2022.02 Rag Status : Green </Text>
+    <Text style={styles.headerText}> Epic: <a href="https://jira.solium.com/browse/DEV-67128">DEV-67128</a></Text>
     
     </View>
     <View style={styles.containerTeam}>
