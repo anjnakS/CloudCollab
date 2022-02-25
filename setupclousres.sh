@@ -2,8 +2,8 @@ echo "########################## "
 echo -e  " Set Shell variables"
 echo "######################### "
 VERSION=2
-SUBSCRIPTION="e247041b-0729-4095-9488-564fbc84a3b7"
-RESOURCE_GROUP="default"
+SUBSCRIPTION="0464d07f-ff01-42ff-9d99-92cd02ad7e83"
+RESOURCE_GROUP="CloudCollabRG"
 ACR_REG_NAME="anjnaacr"$VERSION
 POSTGRES_USER_NAME="anjna"$VERSION
 POSTGRES_DB=anjnapostgres$VERSION
