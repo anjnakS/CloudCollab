@@ -48,26 +48,8 @@ sudo dnf install -y azure-cli
 echo "########################## "
 echo -e  " Build demo project"
 echo "######################### "
-cd Step4
-cd stocks-master
-mvn install
-cd ..
-cd stocks-react-master
+git clone https://github.com/anjnakS/CloudCollab.git
+cd CloudCollab
 npm install
-cd ..
-cd stocks-worker
-mvn install
-cd ..
-cd ..
-cd Step5
-cd stocks-master
-mvn install
-cd ..
-cd stocks-react-master
-npm install
-cd ..
-cd stocks-worker
-mvn install
-cd ..
 echo "############################"
 echo -e "COMPLETE SETUP"
