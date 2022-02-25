@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+   frontend2:
+     stdin_open: true
+     container_name: app2
+     image: 'anjnadockerid1/cloudcollabfrontend:v3'
+     build:
+       dockerfile: Dockerfile
+       context: ./
+     ports:
+       - "3000:80"
+     depends_on:
+       - backend2
+  
