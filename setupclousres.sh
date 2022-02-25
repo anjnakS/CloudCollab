@@ -4,18 +4,16 @@ echo "######################### "
 VERSION=2
 SUBSCRIPTION="0464d07f-ff01-42ff-9d99-92cd02ad7e83"
 RESOURCE_GROUP="CloudCollabRG"
-ACR_REG_NAME="anjnaacr"$VERSION
-POSTGRES_USER_NAME="anjna"$VERSION
-POSTGRES_DB=anjnapostgres$VERSION
+ACR_REG_NAME="anjnaacr"
+POSTGRES_USER_NAME="anjna"
+POSTGRES_DB=anjnapostgres
 LOCATION="eastus"
 SKU="Basic"
-KEYVAULTNAME="newsafevault"$VERSION
-POSTGRES_PASSWD="Postgres"$VERSION
-SERVICE_PRINCIPAL="anjnasp"$VERSION
+KEYVAULTNAME="cloudcollabkeyvault"
+POSTGRES_PASSWD="Postgres1"
+SERVICE_PRINCIPAL="anjnaspcc"$
 SP_TENANT_ID="8d09f28d-2b54-4761-98f1-de38762cd939"
- POSTGRES_ORIG_DB="anjnapostgres"
- POSTGRES_ORIG_USER="workeruser"
- POSTGRES_ORIG_PASSWD="Postgres1"
+
  echo "########################## "
 echo -e  " Create Container Registry "
 echo "######################### "
