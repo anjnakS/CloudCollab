@@ -55,7 +55,7 @@ export default function Trainings() {
     <View style={styles.container}>
     <Text style={styles.headerText}> Trainings I am intresested in: </Text>
    
-    <Text style={styles.headerText}> Java Book Club </Text>
+    <Text style={styles.headerText}> Java Book Club (By Adam Sandler) </Text>
     <View style={styles.WorkShape} />
     <Text style={styles.headerText}> Me (Anjna Khanna) </Text>
     <input

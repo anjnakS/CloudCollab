@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { StyleSheet, Text, View } from 'react-native';
-import Login from './Components/Login';
+
+
 import Treeview from './Components/Treeview';
 import JiraResults from './Components/JiraResults';
 
@@ -16,9 +16,7 @@ function App() {
     
       <BrowserRouter>
         <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
+
           <Route path="/results">
           <SearchBar />
             <JiraResults />

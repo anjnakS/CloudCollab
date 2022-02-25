@@ -138,6 +138,20 @@ export default function Treeview() {
             name: "Pictionary"
           }
         ]
+      },
+      {
+        id: "trainings",
+        name: "Trainings",
+        children: [
+          {
+            id: "trainings1",
+            name: "Java (By Adam Sandler)"
+          },
+          {
+            id: "trainings2",
+            name: "Cloud Training (By Sage West)"
+          }
+        ]
       }
     ]
   };
@@ -186,7 +200,7 @@ const [open, setOpen] = React.useState(false);
      }}
    aria-label="rich object"
    defaultCollapseIcon={<ExpandMoreIcon />}
-   defaultExpanded={["company","locations","it","games","location1","location2","location3",]}
+   defaultExpanded={["company","locations","it","games","location1","location2","location3","trainings",]}
    defaultExpandIcon={<ChevronRightIcon />}
    sx={{ height: 500, flexGrow: 1, maxWidth: 400, overflowY: "auto" }}
  >
@@ -205,7 +219,7 @@ const [open, setOpen] = React.useState(false);
      }}> <Team/><br/><TeamGBC/></div>
       <div onContextMenu={handleContextMenu} style={{
       
-      width: window.innerWidth * 0.35,
+      width: window.innerWidth * 0.30,
      
      
      }} >
