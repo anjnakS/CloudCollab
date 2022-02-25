@@ -45,12 +45,6 @@ enabled=1
 gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/azure-cli.repo
 sudo dnf install -y azure-cli
-echo "############################"
-echo    "Install Kubernetes CLI#"
-echo "############################"
-sudo chmod 777 /etc/yum.repos.d
-cp kubernetes.repo /etc/yum.repos.d
-sudo yum install -y kubectl
 echo "########################## "
 echo -e  " Build demo project"
 echo "######################### "
