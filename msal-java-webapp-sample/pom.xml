@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.microsoft.azure</groupId>
 	<artifactId>msal-web-sample</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<version>0.1.0</version>
 	<name>msal-web-sample</name>
 	<description>Web sample for Microsoft Authentication Library for Java</description>
